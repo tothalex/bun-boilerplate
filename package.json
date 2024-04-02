@@ -1,0 +1,16 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "lint": "bun sh.ts lint",
+    "dev": "bun sh.ts dev"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.12",
+    "typescript": "latest",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0"
+  }
+}

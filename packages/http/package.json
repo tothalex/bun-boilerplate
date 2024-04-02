@@ -1,0 +1,12 @@
+{
+  "name": "http",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "lint": "bun eslint ./src/**/*",
+    "format": "bun prettier --write ./src/**/*"
+  },
+  "dependencies": {
+    "lib": "workspace:*"
+  }
+}
