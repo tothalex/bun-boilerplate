@@ -10,7 +10,7 @@ if (process.env.BUN_ENV === 'local') {
   http.use(cors())
 }
 
-if (process.env.BUN_ENV !== 'local') {
+if (process.env.BUN_ENV === 'prod') {
   http.use(
     staticPlugin({
       prefix: '',
