@@ -1,20 +1,27 @@
 import { $ } from 'bun'
 
-const packages = ['packages/http', 'packages/lib', 'packages/html']
+const packages = {
+  html: 'packages/html',
+  http: 'packages/http',
+  lib: 'packages/lib',
+}
 
 const lint = async () => {
-  packages.forEach(async (pkg) => {
+  Object.values(packages).forEach(async (pkg) => {
     await $`cd ${pkg} && bun lint`
   })
 }
 
 const dev = async () => {
-  console.log('asd')
+  await Promise.all([
+    $`cd ${packages.html} && bun dev`,
+    $`cd ${packages.http} && bun dev`,
+  ])
 }
 
 const commands: Record<string, () => Promise<void>> = {
   lint,
-  dev
+  dev,
 }
 
 const command = process.argv[2]

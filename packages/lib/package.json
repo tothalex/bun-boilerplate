@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "lint": "bun eslint ./src/**/*",
-    "format": "bun prettier --write ./src/**/*"
+    "format": "bun prettier --write ./src/**/*",
+    "test": "bun test ./test/**/*"
   } 
 }

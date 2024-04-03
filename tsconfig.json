@@ -23,5 +23,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false
-  }
+  },
+  "include": ["./packages/http/src", "./packages/lib/src"],
+  "exclude": ["node_modules"]
 }

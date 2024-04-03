@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "workspaces": ["packages/*"],
   "scripts": {
+    "start": "cd ./packages/http && bun run start",
+    "build": "cd ./packages/html && bun run build",
     "lint": "bun sh.ts lint",
-    "dev": "bun sh.ts dev"
+    "dev": "bun sh.ts dev",
+    "dev:frontend": "cd ./packages/html && bun dev",
+    "dev:backend": "cd ./packages/http && bun dev",
+    "test": "cd ./packages/lib && bun test",
+    "test:integration": "cd ./packages/http && bun test",
+    "typecheck": "bunx tsc --noEmit && cd ./packages/html && bun run typecheck"
   },
   "devDependencies": {
     "@types/bun": "^1.0.12",
-    "typescript": "latest",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
-    "eslint": "^8.57.0"
+    "eslint": "^8.57.0",
+    "typescript": "latest"
   }
 }
