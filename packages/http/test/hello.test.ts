@@ -11,6 +11,6 @@ describe('hello route', () => {
   it('should return a response', async () => {
     const response = await client.api.hello.get()
 
-    expect(response.data).toBe('hello, wolrd!')
+    expect(response.data).toBe('hello, world!')
   })
 })
